@@ -1,5 +1,23 @@
+The authors created the **DAC-SDC: Design Automation Conference System Design Contest 2022 Dataset** to design and implement new algorithms based on object detection in images acquired from unmanned aerial vehicles (UAVs). The dataset includes 95 categories and 150 thousand images provided by a UAV company [DJI](https://www.dji.com/fi).
 
-Sample image template:
-<img src="https://github.com/dataset-ninja/gland-segmentation/assets/78355358/f158d0dd-71d5-41a2-aba5-4a5f57d54c35" alt="image" width="800">
+# Motivation
 
-<span style="font-size: smaller; font-style: italic;">Image description.</span>
+The 55th Design Automation Conference (DAC) introduced its inaugural System Design Contest (SDC) in 2018, featuring the Lower Power Object Detection Challenge (LPODC). This challenge tasked participants with devising and implementing innovative algorithms for object detection in images captured from unmanned aerial vehicles (UAVs). By providing a unified platform, the LPODC facilitated the development and comparison of state-of-the-art object detection algorithms while also fostering discussions on the insights gained from the entries.
+
+The focus of the LPODC at DAC-SDC'18 was on applications involving unmanned aerial vehicles (UAVs), which typically entail stringent requirements for accuracy, real-time processing, and energy efficiency. Specifically, the LPODC entailed detecting a single object of interest, a critical task in UAV applications. Unlike conventional computer vision challenges like [ImageNet](https://www.image-net.org/) and [PASCAL VOC](http://host.robots.ox.ac.uk/pascal/VOC/), which prioritize accuracy alone, the LPODC assessed overall performance based on a combination of throughput, power consumption, and detection accuracy. This comprehensive evaluation framework took into account the unique features of UAV applications, including real-time processing, energy constraints, and detection accuracy. Moreover, the dataset used in the LPODC comprised images captured from actual UAVs, thereby reflecting the real-world conditions and challenges encountered in UAV applications. Additionally, the LPODC offered participating teams the choice of two hardware platforms for their implementations: an embedded GPU (Jetson TX2 from Nvidia) and an FPGA SoC (PYNQ Z-1 board from Xilinx). These platforms, widely adopted for energy-efficient processing in UAVs, provided teams with flexibility in designing their solutions.
+
+The publicly released dataset comprises a substantial number of manually annotated training images, while the testing dataset is reserved exclusively for evaluation purposes. In total, there are 150,000 images available provided by a UAV company [DJI](https://www.dji.com/fi). Participating teams utilized the training dataset to train their models and algorithms. Subsequently, they submitted these trained models and algorithms to the organizers for evaluation. The evaluation process involved assessing various metrics such as throughput, energy efficiency, and detection accuracy. Evaluations were conducted at the conclusion of each month, with detailed rankings released thereafter. The final rankings were announced at the conclusion of the competition. The top three entries from both GPU and FPGA categories were honored, with their creators invited to present their work at a dedicated technical session during DAC.
+
+The objective of the LPODC task is to conduct single-object detection in each image, with an axis-aligned bounding box delineating the object's position and scale. Given the focus on UAV applications, certain key considerations come into play. Firstly, the object detection task entails pinpointing a specific object from the training dataset, rather than merely identifying objects belonging to a broader category. For instance, if images featuring person A are included in the training dataset, the goal is to detect person A specifically, rather than other individuals. Secondly, the object detection task necessitates achieving both high throughput and high accuracy, aligning with the stringent requirements of UAV applications. This combination of speed and precision is crucial for effectively serving the needs of UAV operations.
+
+## Dataset description
+
+The dataset sourced from DJI encompasses 12 categories of images and 95 sub-categories. Notably, in contrast to prevalent general-purpose datasets such as ImageNet and PASCAL VOC, the objects in this dataset are captured from a UAV perspective, showcasing various viewpoints.
+
+<img src="https://github.com/dataset-ninja/dac-sdc/assets/120389559/63c87caa-ded2-4b4d-82ed-afad7c3a37c6" alt="image" width="800">
+
+<span style="font-size: smaller; font-style: italic;">Overview of the dataset provided by DJI.</span>
+
+Within the dataset, the majority of images feature objects sized between 1-2% of the captured image dimensions (640x360), which is characteristic of UAV-view imagery. This proportion maintains a favorable balance in terms of image brightness and information content. Most images exhibit moderate levels of brightness and information, akin to a Gaussian distribution, with fewer instances of excessively high or low brightness or information content.
+
+**Note:** the authors did not provide a division of the dataset into training and testing.
