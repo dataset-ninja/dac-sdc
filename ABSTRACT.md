@@ -1,6 +1,6 @@
 The authors created the **DAC-SDC: Design Automation Conference System Design Contest 2022 Dataset** to design and implement new algorithms based on object detection in images acquired from unmanned aerial vehicles (UAVs). The dataset includes 95 categories and 150 thousand images provided by a UAV company [DJI](https://www.dji.com/fi).
 
-# Motivation
+## Motivation
 
 The 55th Design Automation Conference (DAC) introduced its inaugural System Design Contest (SDC) in 2018, featuring the Lower Power Object Detection Challenge (LPODC). This challenge tasked participants with devising and implementing innovative algorithms for object detection in images captured from unmanned aerial vehicles (UAVs). By providing a unified platform, the LPODC facilitated the development and comparison of state-of-the-art object detection algorithms while also fostering discussions on the insights gained from the entries.
 
