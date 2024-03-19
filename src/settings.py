@@ -13,9 +13,9 @@ from dataset_tools.templates import (
 ##################################
 # * Before uploading to instance #
 ##################################
-PROJECT_NAME: str = "DAC-SDC"
+PROJECT_NAME: str = "DAC-SDC 2022"
 PROJECT_NAME_FULL: str = "DAC-SDC: Design Automation Conference System Design Contest 2022 Dataset"
-HIDE_DATASET = True  # set False when 100% sure about repo quality
+HIDE_DATASET = False  # set False when 100% sure about repo quality
 
 ##################################
 # * After uploading to instance ##
@@ -24,9 +24,9 @@ LICENSE: License = License.MIT(
     source_url="https://github.com/jgoeders/dac_sdc_2022/blob/master/LICENSE"
 )
 APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.SearchAndRescue()]
-CATEGORY: Category = Category.Safety(extra=[Category.Aerial(), Category.Drones()])
+CATEGORY: Category = Category.Safety(extra=[Category.Drones()])
 
-CV_TASKS: List[CVTask] = [CVTask.ObjectDetection()]
+CV_TASKS: List[CVTask] = [CVTask.ObjectDetection(), CVTask.Identification()]
 ANNOTATION_TYPES: List[AnnotationType] = [AnnotationType.ObjectDetection()]
 
 RELEASE_DATE: Optional[str] = None  # e.g. "YYYY-MM-DD"
@@ -39,7 +39,7 @@ HOMEPAGE_URL: str = "https://byuccl.github.io/dac_sdc_2022/"
 PREVIEW_IMAGE_ID: int = 15948317
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
-GITHUB_URL: str = "https://github.com/dataset-ninja/dac-sdc"
+GITHUB_URL: str = "https://github.com/dataset-ninja/dac-sdc-2022"
 # URL to GitHub repo on dataset ninja (e.g. "https://github.com/dataset-ninja/some-dataset")
 
 ##################################
@@ -107,7 +107,7 @@ ORGANIZATION_URL: Optional[Union[str, List[str]]] = [
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
 SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {
-    "__POSTTEXT__": "Additionally, every image marked with its **sequence*** tag",
+    "__POSTTEXT__": "Additionally, every image marked with its ***sequence*** tag",
 }
 TAGS: Optional[
     List[
